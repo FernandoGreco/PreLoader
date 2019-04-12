@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>PÁGINA LOAD</title>
+	<link rel="stylesheet" href="css/style.css" media="screen"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <!-- FlexSlider -->
+
+	<script type="text/javascript" src="js/coda-slider.1.1.1.pack.js"></script>
+	<style type="text/css">
+	div#container{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left:0px;
+	background-color: #eee;
+	display: block;
+}
+
+
+.loader {
+	position:absolute;
+	top: 50%;
+	left:50%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="loader" id="loader"></div>
+		<div id="content">
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+			<img src="img/4k.jpg" width="100%" height="auto"/>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		// Este evendo é acionado após o carregamento da página
+		jQuery(window).load(function() {
+			//Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+			jQuery("#loader").delay(2000).fadeOut("slow");
+		});
+	</script>
+</body>
+</html>
